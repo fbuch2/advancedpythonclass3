@@ -4,20 +4,7 @@ Script to make updates in github
 
 import pandas as pd
 import click
-
-class FilteringClass:
-    """
-    Class for filtering
-    """
-
-    def __init__(self,df):
-        self.df = df
-
-    def filter_price(self, price):
-        """
-        Filter price
-        """
-        return self.df[self.df['Price Starting With ($)'] < price]
+import scripts.filtering as f
 
 def load_dataset(filename):
     """
@@ -38,7 +25,7 @@ def main(file_name):
     df = load_dataset(file_name)
     
     
-    result = FilteringClass(df).filter_price(12)
+    result = f.FilteringClass(df).filter_price(12)
     
     print(result.shape)
 

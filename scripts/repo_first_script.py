@@ -4,7 +4,7 @@ Script to make updates in github
 
 import pandas as pd
 import click
-import scripts.filtering as f
+import filtering as f
 
 def load_dataset(filename):
     """

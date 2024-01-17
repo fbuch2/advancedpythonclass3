@@ -49,6 +49,9 @@ class FilteringClass:
         raise TypeError("The month you entered is not valid.")
 
     def filter_year_length(self, year):
+        """
+        Ensures that the lenght of the entered number is 4, soo it is a year
+        """
         if len(year) == 4:
             return True
         raise TypeError

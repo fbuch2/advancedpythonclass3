@@ -3,10 +3,12 @@ Script to make updates in github
 """
 
 import sys
+from filtering import FilteringClass as f
 import pandas as pd
 import click
-sys.path.append('scripts')
-from filtering import FilteringClass as f
+
+sys.path.append("scripts")
+
 
 def load_dataset(filename):
     """
@@ -22,7 +24,6 @@ def load_dataset(filename):
 @click.option("-f", "--file_name", required=True, help="File to import")
 @click.option("-p", "--price", required=True, help="Price to filter by")
 @click.option("-m", "--month", help="Month to filter by")
-@click.option("-y", "--year", help="Year to filter by")
 @click.option("-y", "--year", help="Year to filter by")
 def main(file_name, price, month, year):
     """

@@ -18,7 +18,6 @@ class TestDataset(unittest.TestCase):
         """
         self.path = "datasets/BooksDatasetClean.cfdsv"
 
-
     def test_extensions_fail(self):
         """
         Test for the extensions of the dataset

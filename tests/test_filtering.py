@@ -16,7 +16,7 @@ class TestFiltering(unittest.TestCase):
         Wrong variables to enter
         """
         self.price = "AAAA"
-        self.price_high= 2000
+        self.price_high = 2000
         self.month = "04"
         self.year = "ASD"
         self.year_length = 230
@@ -27,7 +27,7 @@ class TestFiltering(unittest.TestCase):
         """
         with self.assertRaises(TypeError):
             FilteringClass.filter_price(self, self.price)
-    
+
     def test_price_high(self):
         """
         Test the price high filter
@@ -55,7 +55,7 @@ class TestFiltering(unittest.TestCase):
         """
         with self.assertRaises(TypeError):
             FilteringClass.filter_year_length(self, self.year_length)
-    
+
 
 if __name__ == "__main__":
     unittest.main()

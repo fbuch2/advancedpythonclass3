@@ -2,8 +2,10 @@
 Test loading of the dataset
 """
 
+
 import unittest
 from scripts.repo_first_script import load_dataset
+
 
 class TestDataset(unittest.TestCase):
     """
@@ -15,6 +17,7 @@ class TestDataset(unittest.TestCase):
         Path to dataset
         """
         self.path = "datasets/BooksDatasetClean.cfdsv"
+        self.path_good = "datasets/BooksDatasetClean.csv"
 
     def test_extensions_fail(self):
         """

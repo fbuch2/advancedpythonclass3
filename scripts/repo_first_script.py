@@ -42,6 +42,7 @@ def main(file_name, price, month, year):
         df = f.FilteringClass(df).filter_year(year)
 
     print(df.shape)
+    print("Testiiiing")
 
 
 if __name__ == "__main__":

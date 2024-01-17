@@ -17,7 +17,7 @@ class TestDataset(unittest.TestCase):
         Path to dataset
         """
         self.path = "datasets/BooksDatasetClean.cfdsv"
-        self.path_good = "datasets/BooksDatasetClean.csv"
+
 
     def test_extensions_fail(self):
         """

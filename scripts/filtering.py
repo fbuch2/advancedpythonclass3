@@ -19,6 +19,15 @@ class FilteringClass:
         else:
             raise TypeError(f"The entered price: {price} is not a number. Please enter a correct price.")
 
+    def filter_price_high(self, price):
+        """
+        Check if the entered price is too high
+        """    
+        if price <= 1095:
+            return True
+        else:
+            raise TypeError(f"The entered price: {price} is too high. Please enter a smaller price.")
+
     def filter_month(self, month):
     
         """

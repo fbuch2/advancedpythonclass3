@@ -5,8 +5,11 @@ Script to make updates in github
 import pandas as pd
 import click
 import filtering as f
+class4_testing
 
 #When testing the script with pytest, it asks for scripts.filtering as f. But, while using the script scripts. is not asked
+
+main
 
 def load_dataset(filename):
     """

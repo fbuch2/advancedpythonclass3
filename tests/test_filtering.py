@@ -5,6 +5,7 @@ Test the filtering of the dataset
 import unittest
 from scripts.filtering import FilteringClass
 
+
 class TestFiltering(unittest.TestCase):
     """
     Class to test the different filters.
@@ -14,16 +15,38 @@ class TestFiltering(unittest.TestCase):
         """
         Wrong variables to enter
         """
-        self.price = "ABC"
-        self.month = "April"
-        self.year = "Twenty-two"
+        self.price = "AAAA"
+        self.month = "04"
+        self.year = "ASD"
+        self.year_length = 230
 
     def test_price(self):
         """
         Test the price filter
         """
         with self.assertRaises(TypeError):
-            FilteringClass.filter_price(self.price)
+            FilteringClass.filter_price(self, self.price)
+
+    def test_month(self):
+        """
+        Test the month filter
+        """
+        with self.assertRaises(TypeError):
+            FilteringClass.filter_month(self, self.month)
+
+    def test_year_type(self):
+        """
+        Test if the year filter is a number
+        """
+        with self.assertRaises(TypeError):
+            FilteringClass.filter_year(self, self.year)
+
+    def test_year_length(self):
+        """
+        Test if the input year has 4 numbers.
+        """
+        with self.assertRaises(TypeError):
+            FilteringClass.filter_year_length(self, self.year_length)
     
 
 if __name__ == "__main__":

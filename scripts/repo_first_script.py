@@ -3,11 +3,12 @@ Script to make updates in github
 """
 
 import sys
-from filtering import FilteringClass as f
+sys.path.append("scripts")
+from filtering import FilteringClass
 import pandas as pd
 import click
 
-sys.path.append("scripts")
+
 
 
 def load_dataset(filename):
@@ -34,11 +35,11 @@ def main(file_name, price, month, year):
     print(df.shape)
 
     if price:
-        df = f.FilteringClass(df).filter_price(float(price))
+        df = FilteringClass(df).filter_price(float(price))
     if month:
-        df = f.FilteringClass(df).filter_month(month)
+        df = FilteringClass(df).filter_month(month)
     if year:
-        df = f.FilteringClass(df).filter_year(year)
+        df = FilteringClass(df).filter_year(year)
 
     print(df.shape)
 
